@@ -23,6 +23,11 @@ POSITIVE_WORDS = [
     "chill",
     "relaxed",
     "amazing",
+    "lit",
+    "goated",
+    "slay",
+    "dope",
+    "vibing",
 ]
 
 NEGATIVE_WORDS = [
@@ -36,6 +41,11 @@ NEGATIVE_WORDS = [
     "stressed",
     "hate",
     "boring",
+    "mid",
+    "cringe",
+    "trash",
+    "ugh",
+    "sucks",
 ]
 
 # ---------------------------------------------------------------------
@@ -50,6 +60,14 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+    "Highkey love hanging out with my friends, no cap 😂",
+    "Lowkey stressed but kind of proud of myself 🥲",
+    "I absolutely love getting stuck in traffic",
+    "Finally finished my project! Feeling amazing :)",
+    "My phone died right before the interview :(",
+    "Just picked up groceries and headed home",
+    "That movie was so bad it was actually fun 💀",
+    "Excited for my new job, but sad to leave my team",
 ]
 
 # Human labels for each post above.
@@ -65,30 +83,12 @@ TRUE_LABELS = [
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+    "positive",  # "Highkey love hanging out with my friends, no cap 😂"
+    "mixed",     # "Lowkey stressed but kind of proud of myself 🥲"
+    "negative",  # "I absolutely love getting stuck in traffic" (sarcasm)
+    "positive",  # "Finally finished my project! Feeling amazing :)"
+    "negative",  # "My phone died right before the interview :("
+    "neutral",   # "Just picked up groceries and headed home"
+    "mixed",     # "That movie was so bad it was actually fun 💀" (could be positive)
+    "mixed",     # "Excited for my new job, but sad to leave my team"
 ]
-
-# TODO: Add 5-10 more posts and labels.
-#
-# Requirements:
-#   - For every new post you add to SAMPLE_POSTS, you must add one
-#     matching label to TRUE_LABELS.
-#   - SAMPLE_POSTS and TRUE_LABELS must always have the same length.
-#   - Include a variety of language styles, such as:
-#       * Slang ("lowkey", "highkey", "no cap")
-#       * Emojis (":)", ":(", "🥲", "😂", "💀")
-#       * Sarcasm ("I absolutely love getting stuck in traffic")
-#       * Ambiguous or mixed feelings
-#
-# Tips:
-#   - Try to create some examples that are hard to label even for you.
-#   - Make a note of any examples that you and a friend might disagree on.
-#     Those "edge cases" are interesting to inspect for both the rule based
-#     and ML models.
-#
-# Example of how you might extend the lists:
-#
-# SAMPLE_POSTS.append("Lowkey stressed but kind of proud of myself")
-# TRUE_LABELS.append("mixed")
-#
-# Remember to keep them aligned:
-#   len(SAMPLE_POSTS) == len(TRUE_LABELS)
